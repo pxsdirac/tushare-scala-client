@@ -159,3 +159,5 @@ local.sbt
 # vscode
 .vscode/
 .metals/
+
+*/tmp
