@@ -20,6 +20,11 @@ object StockBasicExample extends App {
     writeConsistency = ConsistencyLevel.ALL
   )
   implicit val cache: ScyllaCache = new ScyllaCache(scyllaSettings)
+  // 若不需要cache, 将cache换成以下的实现
+  // implicit val cache = com.github.pxsdirac.tushare.core.cache.Cache.noCache
+
+  // 若不使用~/.tushare/token中的值, 可使用以下方式定义token
+  // implicit val token = com.github.pxsdirac.tushare.core.Token("your token")
 
   val request = StockBasicRequest()
 

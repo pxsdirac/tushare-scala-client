@@ -3,6 +3,7 @@ val AkkaHttpVersion = "10.2.4"
 val circeVersion = "0.12.3"
 
 lazy val core = (project in file(".")).settings(
+  organization := "com.github.pxsdirac",
   libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
     "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
